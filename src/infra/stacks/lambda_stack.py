@@ -15,8 +15,9 @@ class LambdaStack(Stack):
         return _lambda.Function(
             self,
             "HelloLambdaFunction",
-            runtime=_lambda.Runtime.PYTHON_3_11,  # Changed to Python 3.11
+            runtime=_lambda.Runtime.PYTHON_3_11,
             handler="hello_lambda.handler",
+            function_name="hello-lambda",
             code=_lambda.Code.from_asset("src/services/lambda"),
             environment={
                 "ENV_VAR1": "value1",
