@@ -1,4 +1,5 @@
 import json
+import os
 
 def handler(event, context):
     print('request:', json.dumps(event))
@@ -7,5 +8,5 @@ def handler(event, context):
         'headers': {
             'Content-Type': 'text/plain'
         },
-        'body': f'Hello, CDK! You have hit {event["path"]}\n'
+        'body': f'Hello, CDK! Printing ENV_VAR1 { os.environ.get('ENV_VAR1', 'Unknown')}\n'
     }
