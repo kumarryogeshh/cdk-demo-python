@@ -33,4 +33,5 @@ jobs:
       - name: Deploy CDK stack
         run: |
           npm install -g aws-cdk
+          cdk bootstrap
           cdk deploy --require-approval never
