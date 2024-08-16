@@ -8,5 +8,5 @@ def handler(event, context):
         'headers': {
             'Content-Type': 'text/plain'
         },
-        'body': f'Hello, CDK! Printing ENV_VAR1 { os.environ.get('ENV_VAR1', 'Unknown')}\n'
+        'body': f'Hello, CDK! Printing ENV_VAR1 {os.environ.get("ENV_VAR1", "Unknown")}\n'
     }
